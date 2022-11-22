@@ -119,10 +119,24 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controller\Controller.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Model\Player.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\PlayerGuess.xaml.cs">
+      <DependentUpon>PlayerGuess.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PlayerList.xaml.cs">
+      <DependentUpon>PlayerList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PlayerTemplate.xaml.cs">
+      <DependentUpon>PlayerTemplate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\TeamGuess.xaml.cs">
+      <DependentUpon>TeamGuess.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -130,6 +144,12 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\all-players.png" />
+    <Content Include="Assets\flag.png" />
+    <Content Include="Assets\player.png" />
+    <Content Include="Assets\playertemplate.png" />
+    <Content Include="Assets\position.png" />
+    <Content Include="Assets\team.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -147,6 +167,22 @@
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\PlayerGuess.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\PlayerList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\PlayerTemplate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\TeamGuess.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
