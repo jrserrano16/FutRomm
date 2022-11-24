@@ -1,6 +1,7 @@
 ﻿using FutRomm.Model;
 using System;
 using System.Collections.Generic;
+using Windows.System;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Navigation;
@@ -44,7 +45,11 @@ namespace FutRomm.View
 
         private void tbx_Filtro_KeyUp(object sender, KeyRoutedEventArgs e)
         {
-            filterSearch();
+            if (e.Key == VirtualKey.Enter)
+            {
+                calcularc_Click(sender,e);
+            }
+           
         }
         private void filterSearch()
         {
@@ -86,11 +91,10 @@ namespace FutRomm.View
 
                     }
                     break;
-
                 case 3:
                     foreach (Player p in playerList)
                     {
-                        if (p.nationality.ToLower().Contains(tbx_Filtro.Text.ToLower()))
+                        if (p.nation.ToLower().Contains(tbx_Filtro.Text.ToLower()))
                         {
                             playerListAUX.Add(p);
                             Player = new PlayerTemplate(p);
@@ -103,7 +107,7 @@ namespace FutRomm.View
                 case 4:
                     foreach (Player p in playerList)
                     {
-                        if (p.position.ToLower().Contains(tbx_Filtro.Text.ToLower()))
+                        if (p.league.ToLower().Contains(tbx_Filtro.Text.ToLower()))
                         {
                             playerListAUX.Add(p);
                             Player = new PlayerTemplate(p);
@@ -113,7 +117,18 @@ namespace FutRomm.View
                     }
                     break;
 
+                case 5:
+                    foreach (Player p in playerList)
+                    {
+                        if (p.position.ToLower().Contains(tbx_Filtro.Text.ToLower()))
+                        {
+                            playerListAUX.Add(p);
+                            Player = new PlayerTemplate(p);
+                            ventana.Items.Add(Player);
+                        }
 
+                    }
+                    break;
                 default:
                     foreach (Player p in playerList)
                     {
@@ -122,20 +137,20 @@ namespace FutRomm.View
                         ventana.Items.Add(Player);
                     }
                     break;
-
             }
         }
 
         private void cmb_Filter_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             tbx_Filtro.IsEnabled = true;
+            btn_search.IsEnabled = true;
             tbx_Filtro.Text = String.Empty;
             if (cmb_Filter.SelectedIndex==0)
             {
                 tbx_Filtro.IsEnabled = false;
+                btn_search.IsEnabled = false;
                 tbx_Filtro.Text = "Select Filter";
             }
-            filterSearch();
         }
 
         private void tbx_Filtro_GotFocus(object sender, Windows.UI.Xaml.RoutedEventArgs e)
@@ -146,7 +161,10 @@ namespace FutRomm.View
 
         }
 
-
+        private void calcularc_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            filterSearch();
+        }
     }
 }
 

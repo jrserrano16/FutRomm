@@ -12,12 +12,16 @@ namespace FutRomm.Model
         public String name { get; set; }
         public int age { get; set; }
         public String photo { get; set; }
-        public String nationality { get; set; }
-        public String flag { get; set; }
+        public String nation { get; set; }
+        public int nation_id { get; set; }
+        public String nation_logo { get; set; }
         public String club { get; set; }
+        public int club_id { get; set; }
         public String club_logo { get; set; }
+        public String league { get; set; }
+        public int league_id { get; set; }
+        public String league_logo { get; set; }
         public String foot { get; set; }
         public String position { get; set; }
-        public int kit_number { get; set; }
     }
 }
