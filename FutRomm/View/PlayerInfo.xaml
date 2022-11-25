@@ -1,0 +1,75 @@
+﻿<Page
+    x:Class="FutRomm.View.PlayerInfo"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:FutRomm.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+     Background="#FF1F1F1F" Height="850"  Width="1596" >
+
+    <Grid x:Name="grid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1213*"/>
+            <ColumnDefinition Width="383*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="79*"/>
+            <RowDefinition Height="421*"/>
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="Titulo" Margin="475,38,453,0" TextWrapping="Wrap" Text="Player Info" VerticalAlignment="Top" FontWeight="Bold" FontSize="48" Height="61" Foreground="White" FontFamily="Montserrat"/>
+        <Rectangle x:Name="fondo" HorizontalAlignment="Left" Height="713" VerticalAlignment="Top" Width="1210" Fill="#FF292828" StrokeThickness="3.2" Grid.RowSpan="2" Margin="0,134,0,0" Stroke="Black"/>
+        <Image x:Name="img_player" HorizontalAlignment="Left" Height="250" Width="250" Margin="32,34,0,0" Grid.Row="1" VerticalAlignment="Top" Source="/Assets/player.png"/>
+        <TextBlock x:Name="txt_nombre" TextWrapping="Wrap" Text="Player Name
+                   " Margin="287,57,115,607" FontSize="40" FontFamily="Montserrat" FontWeight="Bold" RenderTransformOrigin="0.5,0.5" Grid.Row="1">
+            <TextBlock.RenderTransform>
+                <CompositeTransform ScaleY="1"/>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <Rectangle x:Name="fondo_player" HorizontalAlignment="Left" Height="250" Width="250" Margin="32,34,0,0" Grid.Row="1" Stroke="Black" VerticalAlignment="Top"/>
+        <Image x:Name="img_team" HorizontalAlignment="Left" Height="68" Margin="38,394,0,0" Grid.Row="1" VerticalAlignment="Top" Width="61" Source="/Assets/team.png" RenderTransformOrigin="1.482,0.556"/>
+        <TextBlock x:Name="txt_team" Grid.Row="1" TextWrapping="Wrap" Text="Team : Paris SG" Margin="156,407,641,264" FontSize="30" FontFamily="Montserrat" FontWeight="Bold"/>
+        <Image x:Name="img_nation" HorizontalAlignment="Left" Height="55" Margin="30,317,0,0" Grid.Row="1" VerticalAlignment="Top" Width="88" Source="/Assets/flag.png" RenderTransformOrigin="0.434,0.755" Stretch="Fill"/>
+        <TextBlock x:Name="txt_nation" Grid.Row="1" TextWrapping="Wrap" Text="Nation : France" Margin="157,324,605,344" FontSize="30" FontFamily="Montserrat" FontWeight="Bold"/>
+        <Image x:Name="img_league" HorizontalAlignment="Left" Height="68" Margin="38,472,0,0" Grid.Row="1" VerticalAlignment="Top" Width="61" Source="/Assets/league.png"/>
+        <TextBlock x:Name="txt_league" Grid.Row="1" TextWrapping="Wrap" Text="League : Ligue 1" Margin="159,484,620,192" FontSize="30" FontFamily="Montserrat" FontWeight="Bold"/>
+        <TextBlock x:Name="txt_age" Grid.Row="1" TextWrapping="Wrap" Text="Age : 23" Margin="286,122,205,542" FontSize="40" FontFamily="Montserrat" FontWeight="Bold" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+            <TextBlock.RenderTransform>
+                <CompositeTransform ScaleY="1" Rotation="0.27"/>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <Image x:Name="img_foot" HorizontalAlignment="Left" Height="49" Margin="44,549,0,0" Grid.Row="1" VerticalAlignment="Top" Width="61" Source="/Assets/left.png" RenderTransformOrigin="0.848,0.526"/>
+        <TextBlock x:Name="txt_foot" Grid.Row="1" TextWrapping="Wrap" Text="Foot : Left" Margin="159,556,724,115" FontSize="30" FontFamily="Montserrat" FontWeight="Bold"/>
+        <Image x:Name="img_positions" HorizontalAlignment="Left" Height="623" Margin="632,21,0,0" VerticalAlignment="Top" Width="458" Source="/Assets/positionsmap.jpg" RenderTransformOrigin="0.848,0.526" Stretch="Fill" Grid.Row="1"/>
+        <Button x:Name="btn_info" BorderThickness="2,2,2,2" Height="64" Width="246" BorderBrush="#FF20758D" Background="#FF3791AB" Margin="359,598,0,0" VerticalAlignment="Top" Grid.Row="1">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Width="246" Margin="0,-8,0,-14">
+                <Image Source="/Assets/info.png" Width="61" Height="37"/>
+                <TextBlock Text="FIFA 23 Info"
+                    FontSize="30"
+                    VerticalAlignment="Center" Margin="0,0,0,2" FontFamily="Montserrat" Width="316" Foreground="White" Height="32"/>
+            </StackPanel>
+        </Button>
+        <Image x:Name="GK" Tag="GK" HorizontalAlignment="Left" Height="66" Margin="834,544,0,0" Grid.Row="1" VerticalAlignment="Top" Width="58" Source="/Assets/shirt.png" Opacity="0.25" ToolTipService.ToolTip="GK"/>
+        <Image x:Name="CB1" Tag="CB" HorizontalAlignment="Left" Height="66" Margin="769,433,0,0" Grid.Row="1" VerticalAlignment="Top" Width="58" Source="/Assets/shirt.png" Opacity="0.25"/>
+        <Image x:Name="CB2" Tag="CB" HorizontalAlignment="Left" Height="66" Margin="894,433,0,0" Grid.Row="1" VerticalAlignment="Top" Width="58" Source="/Assets/shirt.png" Opacity="0.25"/>
+        <Image x:Name="CB3" Tag="CB" HorizontalAlignment="Left" Height="66" Margin="832,433,0,0" Grid.Row="1" VerticalAlignment="Top" Width="58" Source="/Assets/shirt.png" Opacity="0.25"/>
+        <Image x:Name="LB" Tag="LB" HorizontalAlignment="Left" Height="66" Margin="678,425,0,0" Grid.Row="1" VerticalAlignment="Top" Width="58" Source="/Assets/shirt.png" Opacity="0.25"/>
+        <Image x:Name="RB" Tag="RB" HorizontalAlignment="Left" Height="66" Margin="989,425,0,0" Grid.Row="1" VerticalAlignment="Top" Width="58" Source="/Assets/shirt.png" Opacity="0.25"/>
+        <Image x:Name="RWB" Tag="RWB" HorizontalAlignment="Left" Height="66" Margin="1024,335,0,0" Grid.Row="1" VerticalAlignment="Top" Width="58" Source="/Assets/shirt.png" Opacity="0.25"/>
+        <Image x:Name="LWB" Tag="LWB" HorizontalAlignment="Left" Height="66" Margin="640,335,0,0" Grid.Row="1" VerticalAlignment="Top" Width="58" Source="/Assets/shirt.png" Opacity="0.25"/>
+        <Image x:Name="CDM" Tag="CDM" HorizontalAlignment="Left" Height="66" Margin="834,353,0,0" Grid.Row="1" VerticalAlignment="Top" Width="58" Source="/Assets/shirt.png" Opacity="0.25"/>
+        <Image x:Name="RM" Tag="RM" HorizontalAlignment="Left" Height="66" Margin="989,259,0,0" Grid.Row="1" VerticalAlignment="Top" Width="58" Source="/Assets/shirt.png" Opacity="0.25"/>
+        <Image x:Name="CM1" Tag="CM" HorizontalAlignment="Left" Height="66" Margin="892,288,0,0" Grid.Row="1" VerticalAlignment="Top" Width="58" Source="/Assets/shirt.png" Opacity="0.25"/>
+        <Image x:Name="CM2" Tag="CM" HorizontalAlignment="Left" Height="66" Margin="771,288,0,0" Grid.Row="1" VerticalAlignment="Top" Width="58" Source="/Assets/shirt.png" Opacity="0.25"/>
+        <Image x:Name="LM" Tag="LM" HorizontalAlignment="Left" Height="66" Margin="678,259,0,0" Grid.Row="1" VerticalAlignment="Top" Width="58" Source="/Assets/shirt.png" Opacity="0.25"/>
+        <Image x:Name="CAM" Tag="CAM" HorizontalAlignment="Left" Height="66" Margin="834,211,0,0" Grid.Row="1" VerticalAlignment="Top" Width="58" Source="/Assets/shirt.png" Opacity="0.25"/>
+        <Image x:Name="RW" Tag="RW" HorizontalAlignment="Left" Height="67" Margin="1015,144,0,0" Grid.Row="1" VerticalAlignment="Top" Width="58" Source="/Assets/shirt.png" Opacity="0.25"/>
+        <Image x:Name="LW" Tag="LW" HorizontalAlignment="Left" Height="67" Margin="652,144,0,0" Grid.Row="1" VerticalAlignment="Top" Width="58" Source="/Assets/shirt.png" Opacity="0.25"/>
+        <Image x:Name="RF" Tag="RF" HorizontalAlignment="Left" Height="66" Margin="980,84,0,0" VerticalAlignment="Top" Width="58" Source="/Assets/shirt.png" Opacity="0.25" Grid.Row="1"/>
+        <Image x:Name="LF" Tag="LF" HorizontalAlignment="Left" Height="66" Margin="683,82,0,0" VerticalAlignment="Top" Width="59" Source="/Assets/shirt.png" Opacity="0.25" Grid.Row="1"/>
+        <Image x:Name="CF" Tag="CF" HorizontalAlignment="Left" Height="66" Margin="834,118,0,0" Grid.Row="1" VerticalAlignment="Top" Width="58" Source="/Assets/shirt.png" Opacity="0.25"/>
+        <Image x:Name="ST1" Tag="ST" HorizontalAlignment="Left" Height="66" Margin="897,82,0,0" VerticalAlignment="Top" Width="58" Source="/Assets/shirt.png" Opacity="0.25" Grid.Row="1"/>
+        <Image x:Name="ST2" Tag="ST" HorizontalAlignment="Left" Height="66" Margin="769,82,0,0" VerticalAlignment="Top" Width="58" Source="/Assets/shirt.png" Opacity="0.25" Grid.Row="1"/>
+        <TextBlock x:Name="txt_position" Grid.Row="1" TextWrapping="Wrap" Text="Position : ST" Margin="38,615,875,38" FontSize="30" FontFamily="Montserrat" FontWeight="Bold"/>
+    </Grid>
+</Page>

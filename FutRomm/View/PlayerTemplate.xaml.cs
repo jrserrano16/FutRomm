@@ -1,4 +1,5 @@
-﻿using FutRomm.Model;
+﻿
+using FutRomm.Model;
 using System;
 using Windows.UI;
 using Windows.UI.Xaml.Controls;
@@ -11,9 +12,11 @@ namespace FutRomm.View
 {
     public sealed partial class PlayerTemplate : UserControl
     {
+
         public PlayerTemplate(Player p)
         {
             {
+                
                 InitializeComponent();
                 name.Text = p.name;
                 pos.Text = p.position;

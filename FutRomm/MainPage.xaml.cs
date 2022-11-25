@@ -1,6 +1,8 @@
 ﻿using FutRomm.Model;
+using FutRomm.View;
 using System.Collections.Generic;
 using System.Reflection;
+using Windows.UI.Core;
 using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -129,14 +131,14 @@ namespace FutRomm
             if (string.IsNullOrWhiteSpace(clickedView) || view == null)
                 return false;
 
-            ContentFrame.Navigate(view, null, new EntranceNavigationTransitionInfo());
+
+            ContentFrame.Navigate(view, this, new EntranceNavigationTransitionInfo());
             return true;
         }
-
-        private void NaviView_Loaded(object sender, RoutedEventArgs e)
-        {
-
+        public void getPlayerInfo(Player p)
+        { 
+            ContentFrame.Navigate(typeof(PlayerInfo), p);
+            SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility = AppViewBackButtonVisibility.Visible;
         }
-
     }
 }

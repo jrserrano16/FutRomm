@@ -1,4 +1,5 @@
-﻿using FutRomm.Model;
+﻿
+using FutRomm.Model;
 using System;
 using System.Collections.Generic;
 using Windows.System;
@@ -33,15 +34,6 @@ namespace FutRomm.View
             padre = (MainPage)e.Parameter;
         }
 
-        private void Panel_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            /*  if (cmb_Filter.SelectedIndex==4)
-              {
-                  padre.irHookedex2(PlayerMixListAUX[ventana.SelectedIndex]);
-              }
-              padre.irHookedex(playerListAUX[ventana.SelectedIndex]);
-          */
-        }
 
         private void tbx_Filtro_KeyUp(object sender, KeyRoutedEventArgs e)
         {
@@ -139,7 +131,6 @@ namespace FutRomm.View
                     break;
             }
         }
-
         private void cmb_Filter_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             tbx_Filtro.IsEnabled = true;
@@ -165,6 +156,12 @@ namespace FutRomm.View
         {
             filterSearch();
         }
+       
+        private void ventana_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            padre.getPlayerInfo(playerListAUX[ventana.SelectedIndex]);
+        }
+       
     }
 }
 

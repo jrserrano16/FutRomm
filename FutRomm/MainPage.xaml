@@ -14,7 +14,7 @@
             <ColumnDefinition Width="133*"/>
         </Grid.ColumnDefinitions>
         <Frame x:Name="ContentFrame" NavigationFailed="ContentFrame_NavigationFailed" Height="800" VerticalAlignment="Center" HorizontalAlignment="Center" Width="1596" Grid.Column="1"/>
-        <NavigationView x:Name="NaviView" VerticalAlignment="Center" Height="800" ItemInvoked="NaviView_ItemInvoked" Loaded="NaviView_Loaded" IsSettingsVisible="False" IsPaneToggleButtonVisible="False" Grid.ColumnSpan="2" >
+        <NavigationView x:Name="NaviView" VerticalAlignment="Center" Height="800" ItemInvoked="NaviView_ItemInvoked" IsSettingsVisible="False" IsPaneToggleButtonVisible="False" Grid.ColumnSpan="2" >
             <NavigationView.MenuItems>
                 <NavigationViewItem Content="Mostrar Jugadores" Tag="PlayerList" Icon="People" FontFamily="Montserrat" FontSize="20"/>
                 <NavigationViewItem Content="Adivinar el Jugador" Tag="PlayerGuess" Icon="Contact"  FontFamily="Montserrat" FontSize="20"/>
