@@ -120,7 +120,11 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controller\Controller.cs" />
-    <Compile Include="MainPage.xaml.cs">
+    <Compile Include="Model\Question.cs" />
+    <Compile Include="View\InteractiveVideos.xaml.cs">
+      <DependentUpon>InteractiveVideos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Model\League.cs" />
@@ -132,6 +136,12 @@
     <Compile Include="Model\Team.cs" />
     <Compile Include="Model\TeamApi.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\MillionaireGame.xaml.cs">
+      <DependentUpon>MillionaireGame.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MillionaireIntro.xaml.cs">
+      <DependentUpon>MillionaireIntro.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\PlayerGuess.xaml.cs">
       <DependentUpon>PlayerGuess.xaml</DependentUpon>
     </Compile>
@@ -161,7 +171,9 @@
     <Content Include="Assets\bundes.png" />
     <Content Include="Assets\correct.png" />
     <Content Include="Assets\eredivisie.png" />
+    <Content Include="Assets\euro.png" />
     <Content Include="Assets\flag.png" />
+    <Content Include="Assets\futromm.png" />
     <Content Include="Assets\incorrect.png" />
     <Content Include="Assets\info.png" />
     <Content Include="Assets\INT.png" />
@@ -169,6 +181,8 @@
     <Content Include="Assets\league.png" />
     <Content Include="Assets\left.png" />
     <Content Include="Assets\ligue1.png" />
+    <Content Include="Assets\maldini.png" />
+    <Content Include="Assets\millionaire.jpg" />
     <Content Include="Assets\nos.png" />
     <Content Include="Assets\player.png" />
     <Content Include="Assets\playertemplate.png" />
@@ -195,13 +209,25 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="MainPage.xaml">
+    <Page Include="View\InteractiveVideos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Themes\Generic.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\MillionaireGame.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\MillionaireIntro.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\PlayerGuess.xaml">
       <SubType>Designer</SubType>

@@ -47,6 +47,26 @@ namespace FutRomm.Controller
             doc.Save(xmlFile2);
         }
 
+        public static List<Question> loadQuestions()
+        {
+            XmlDocument docSol = new XmlDocument();
+            docSol.Load(xmlFile2);
+            XmlNode root = docSol.SelectSingleNode("FutRomm");
+            XmlNode playersRoot = root.SelectSingleNode("Questions");
+            List<Question> listQuestions = new List<Question>();
+            foreach (XmlNode node in playersRoot.ChildNodes)
+            {
+                Question question = new Question();
+                question.question = node.Attributes["Question"].Value;
+                question.answers = node.Attributes["Answer"].Value.Split(',');
+                question.solution = node.Attributes["Solution"].Value;
+
+                listQuestions.Add(question);
+            }
+            return listQuestions;
+        }
+
+
         public static List<Player> loadPlayers()
         {
             XmlDocument docSol = new XmlDocument();

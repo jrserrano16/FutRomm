@@ -140,5 +140,10 @@ namespace FutRomm
             ContentFrame.Navigate(typeof(PlayerInfo), p);
             SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility = AppViewBackButtonVisibility.Visible;
         }
+        public void navigateMillionaire()
+        {
+            ContentFrame.Navigate(typeof(MillionaireGame));
+            SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility = AppViewBackButtonVisibility.Visible;
+        }
     }
 }
