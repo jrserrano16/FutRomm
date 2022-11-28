@@ -144,6 +144,9 @@
     <Compile Include="View\PlayerTemplate.xaml.cs">
       <DependentUpon>PlayerTemplate.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\SearchTemplate.xaml.cs">
+      <DependentUpon>SearchTemplate.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\TeamGuess.xaml.cs">
       <DependentUpon>TeamGuess.xaml</DependentUpon>
     </Compile>
@@ -156,9 +159,12 @@
   <ItemGroup>
     <Content Include="Assets\all-players.png" />
     <Content Include="Assets\bundes.png" />
+    <Content Include="Assets\correct.png" />
     <Content Include="Assets\eredivisie.png" />
     <Content Include="Assets\flag.png" />
+    <Content Include="Assets\incorrect.png" />
     <Content Include="Assets\info.png" />
+    <Content Include="Assets\INT.png" />
     <Content Include="Assets\laliga.png" />
     <Content Include="Assets\league.png" />
     <Content Include="Assets\left.png" />
@@ -174,6 +180,7 @@
     <Content Include="Assets\serieA.png" />
     <Content Include="Assets\shirt.png" />
     <Content Include="Assets\team.png" />
+    <Content Include="Assets\try.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -192,6 +199,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="View\PlayerGuess.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -205,6 +216,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\PlayerTemplate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SearchTemplate.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

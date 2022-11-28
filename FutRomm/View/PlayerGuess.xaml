@@ -6,9 +6,41 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:chart="using:Syncfusion.UI.Xaml.Charts"
     mc:Ignorable="d"
-   Background="#FF292828">
+    Background="#FF1F1F1F" Height="850"  Width="1596">
 
-    <Grid>
-        
+    <Grid x:Name="grid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="16*"/>
+            <ColumnDefinition Width="5*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="134*"/>
+            <RowDefinition Height="707*"/>
+            <RowDefinition Height="50*"/>
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="Titulo" Margin="401,56,391,0" TextWrapping="Wrap" Text="Guess the Player" VerticalAlignment="Top" FontWeight="Bold" FontSize="48" Height="64" Foreground="White" FontFamily="Montserrat"/>
+        <Rectangle x:Name="fondo" HorizontalAlignment="Left" Height="713" VerticalAlignment="Top" Width="1210" Fill="#FF292828" StrokeThickness="3.2" Grid.RowSpan="2" Stroke="Black" Grid.Row="1"/>
+        <Image x:Name="img_player" Source="/Assets/player.png" Margin="212,10,819,480" Grid.Row="1"/>
+        <Image x:Name="nation" HorizontalAlignment="Left" Height="70" Margin="51,241,0,0" VerticalAlignment="Top" Width="70" Source="/Assets/incorrect.png" Grid.Row="1" ToolTipService.ToolTip="Nationality"/>
+        <Image x:Name="team" HorizontalAlignment="Left" Height="70" Margin="156,241,0,0" VerticalAlignment="Top" Width="70" Source="/Assets/incorrect.png" Grid.Row="1" ToolTipService.ToolTip="Team"/>
+        <Image x:Name="league" HorizontalAlignment="Left" Height="70" Margin="261,241,0,0" VerticalAlignment="Top" Width="70" Source="/Assets/incorrect.png" Grid.Row="1" ToolTipService.ToolTip="Ligue"/>
+        <Image x:Name="position" HorizontalAlignment="Left" Height="70" Margin="367,241,0,0" VerticalAlignment="Top" Width="70" Source="/Assets/incorrect.png" Grid.Row="1" ToolTipService.ToolTip="Position"/>
+        <Image x:Name="age" HorizontalAlignment="Left" Height="70" Margin="472,241,0,0" VerticalAlignment="Top" Width="70" Source="/Assets/incorrect.png" Grid.Row="1" ToolTipService.ToolTip="Age"/>
+        <TextBox x:Name="tbx_try1" Tag="Try" HorizontalAlignment="Left" Margin="84,322,0,0" TextWrapping="Wrap" Text="Try #1" VerticalAlignment="Top" Background="#FF5D5D5D" Height="47" Width="440" FontFamily="Montserrat" FontSize="24" TextAlignment="Center" IsReadOnly="True" Grid.Row="1" IsTapEnabled="False"/>
+        <TextBox x:Name="tbx_try2" Tag="Try" HorizontalAlignment="Left" Margin="84,368,0,0" TextWrapping="Wrap" Text="Try #2" VerticalAlignment="Top" Background="#FF5D5D5D" Height="47" Width="440" FontFamily="Montserrat" FontSize="24" TextAlignment="Center" IsReadOnly="True" Grid.Row="1" IsTapEnabled="False"/>
+        <TextBox x:Name="tbx_try3" Tag="Try" HorizontalAlignment="Left" Margin="84,415,0,0" TextWrapping="Wrap" Text="Try #3" VerticalAlignment="Top" Background="#FF5D5D5D" Height="47" Width="440" FontFamily="Montserrat" FontSize="24" TextAlignment="Center" IsReadOnly="True" Grid.Row="1" IsTapEnabled="False"/>
+        <TextBox x:Name="tbx_try4" Tag="Try" HorizontalAlignment="Left" Margin="84,461,0,0" TextWrapping="Wrap" Text="Try #4" VerticalAlignment="Top" Background="#FF5D5D5D" Height="47" Width="440" FontFamily="Montserrat" FontSize="24" TextAlignment="Center" IsReadOnly="True" Grid.Row="1" IsTapEnabled="False"/>
+        <TextBox x:Name="tbx_try5" Tag="Try" HorizontalAlignment="Left" Margin="84,507,0,0" TextWrapping="Wrap" Text="Try #5" VerticalAlignment="Top" Background="#FF5D5D5D" Height="47" Width="440" FontFamily="Montserrat" FontSize="24" TextAlignment="Center" IsReadOnly="True" Grid.Row="1" IsTapEnabled="False"/>
+        <TextBox x:Name="tbx_try6" Tag="Try" HorizontalAlignment="Left" Margin="84,553,0,0" TextWrapping="Wrap" Text="Try #6" VerticalAlignment="Top" Background="#FF5D5D5D" Height="47" Width="440" FontFamily="Montserrat" FontSize="24" TextAlignment="Center" IsReadOnly="True" Grid.Row="1" IsTapEnabled="False"/>
+        <TextBox x:Name="tbx_guess" HorizontalAlignment="Left" Margin="652,320,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Background="#FFC3C3C3" Height="47" Width="440" FontFamily="Montserrat" FontSize="24" TextAlignment="Center" Foreground="#FF1F1F1F" Grid.Row="1" KeyDown="tbx_guess_KeyDown"/>
+        <Image x:Name="img_nation" HorizontalAlignment="Left" Height="40" Margin="66,257,0,0" Grid.Row="1" VerticalAlignment="Top" Width="40" Source="/Assets/INT.png"/>
+        <Image x:Name="img_team" HorizontalAlignment="Left" Height="40" Margin="171,256,0,0" Grid.Row="1" VerticalAlignment="Top" Width="40" Source="/Assets/INT.png"/>
+        <Image x:Name="img_league" HorizontalAlignment="Left" Height="40" Margin="277,256,0,0" Grid.Row="1" VerticalAlignment="Top" Width="40" Source="/Assets/INT.png"/>
+        <Image x:Name="img_position" HorizontalAlignment="Left" Height="40" Margin="382,257,0,0" Grid.Row="1" VerticalAlignment="Top" Width="40" Source="/Assets/INT.png"/>
+        <TextBlock x:Name="tbx_age" HorizontalAlignment="Left" Margin="482,261,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontFamily="Montserrat" FontSize="25" TextAlignment="Center" Width="50" Height="30" FontWeight="Bold"/>
+        <TextBlock x:Name="tbx_position" HorizontalAlignment="Left" Margin="370,262,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontFamily="Montserrat" FontSize="24" TextAlignment="Center" Width="66" Height="40" FontWeight="Bold"/>
+        <Image x:Name="img_age" HorizontalAlignment="Left" Height="40" Margin="487,257,0,0" Grid.Row="1" VerticalAlignment="Top" Width="40" Source="/Assets/INT.png"/>
+        <GridView x:Name="desp" Grid.Row="1" Margin="652,368,124,33" SelectionChanged="desp_SelectionChanged"/>
+        <TextBlock x:Name="tbx_name" HorizontalAlignment="Left" Margin="171,200,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="35" Width="252" FontSize="24" FontFamily="Montserrat" TextAlignment="Center" FocusVisualPrimaryBrush="#FF3FBE59"/>
     </Grid>
 </Page>

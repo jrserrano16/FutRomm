@@ -1,6 +1,7 @@
 ﻿using FutRomm.Model;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media.Imaging;
@@ -60,6 +61,15 @@ namespace FutRomm.View
                 }
                 
             }
+        }
+
+        private void btn_info_Click(object sender, RoutedEventArgs e)
+        {
+            string[] getId = p.photo.Split('/');
+            string[] id = getId[5].Split('.');
+            string url = "https://www.fifplay.com/fifa-23/players/"+id[0]+"/"+p.name;
+            var uri = new Uri(url);
+            Windows.System.Launcher.LaunchUriAsync(uri);
         }
     }
 }
