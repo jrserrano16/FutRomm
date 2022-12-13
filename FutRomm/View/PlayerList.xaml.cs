@@ -161,7 +161,6 @@ namespace FutRomm.View
         {
             padre.getPlayerInfo(playerListAUX[ventana.SelectedIndex]);
         }
-       
     }
 }
 

@@ -3,6 +3,7 @@ using Newtonsoft.Json;
 using RestSharp;
 using System;
 using System.Collections.Generic;
+using System.Numerics;
 using System.Xml;
 using static FutRomm.Model.LeagueSearch;
 using static FutRomm.Model.NationsSearch;
@@ -26,24 +27,18 @@ namespace FutRomm.Controller
             doc.Load(xmlFile2);
             XmlNode futRom = doc.SelectSingleNode("FutRomm");
             XmlNode playersRoot = futRom.SelectSingleNode("Players");
-            XmlNode teamsRoot = futRom.SelectSingleNode("Teams");
 
-            foreach (XmlNode team in teamsRoot.ChildNodes)
-            {
-                int idTeam = Convert.ToInt32(team.Attributes["League"].Value.ToString());
-                if (idTeam!=10 && idTeam!=13 && idTeam!=16 && idTeam!=19 &&idTeam!=31 && idTeam!=53 && idTeam!=308 && idTeam!=1000)
-                {
-                    teamsRoot.RemoveChild(team);
-                }
-            }
             foreach (XmlNode player in playersRoot.ChildNodes)
             {
-                int idPlayer = Convert.ToInt32(player.Attributes["Liga"].Value.ToString());
-                if (idPlayer!=10 && idPlayer!=13 && idPlayer!=16 && idPlayer!=19 &&idPlayer!=31 && idPlayer!=53 && idPlayer!=308 && idPlayer!=1000)
+                string[] str = player.Attributes["Photo"].Value.ToString().Split('/');
+                string []foto = str[str.Length-1].Split('.');
+                int id = Convert.ToInt32(foto[0]);
+                    if (id >=50000000)
                 {
                     playersRoot.RemoveChild(player);
                 }
             }
+            
             doc.Save(xmlFile2);
         }
 
@@ -377,6 +372,55 @@ namespace FutRomm.Controller
             playersRoot.AppendChild(playerNode);
 
             doc.Save(xmlFile2);
+        }
+
+        internal static List<Team> loadTeams()
+        {
+            XmlDocument docSol = new XmlDocument();
+            docSol.Load(xmlFile2);
+            XmlNode root = docSol.SelectSingleNode("FutRomm");
+            XmlNode leaguesRoot = root.SelectSingleNode("Leagues");
+            XmlNode teamsRoot = root.SelectSingleNode("Teams");
+            List<Team> listTeams = new List<Team>();
+            List<League> listLeagues = new List<League>();
+
+
+            foreach (XmlNode node in leaguesRoot.ChildNodes)
+            {
+                League league = new League();
+                league.Id = Convert.ToInt32(node.Attributes["ID"].Value);
+                league.Name = node.Attributes["Name"].Value;
+                league.country = node.Attributes["Country"].Value;
+                league.Photo = $"ms-appx:///Assets/leagues/{node.Attributes["Image"].Value}";
+
+                listLeagues.Add(league);
+            }
+
+            //<Team ID="112513" Name="FC Arouca" League="308" Image="112513.png" />
+            foreach (XmlNode node in teamsRoot.ChildNodes)
+            {
+                Team team = new Team();
+                team.id = Convert.ToInt32(node.Attributes["ID"].Value);
+                team.name = node.Attributes["Name"].Value;
+                team.league = node.Attributes["League"].Value;
+                team.photo = $"ms-appx:///Assets/teams/{team.id}.png";
+                foreach(League l in listLeagues)
+                {
+                    if (team.league.Equals(l.Id.ToString()))
+                    {
+                        team.league_photo = l.Photo;
+                        team.country_photo = $"ms-appx:///Assets/nations/{l.country}.png";
+                        team.country = l.country;
+                        break;
+                    }
+                    
+                }
+                
+
+
+                listTeams.Add(team);
+            }
+            return listTeams;
         }
     }
 }

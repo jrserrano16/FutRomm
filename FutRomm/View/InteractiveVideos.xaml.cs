@@ -26,5 +26,25 @@ namespace FutRomm.View
         {
             this.InitializeComponent();
         }
+
+        private void btn_Champions_Click(object sender, RoutedEventArgs e)
+        {
+            Windows.System.Launcher.LaunchUriAsync(new Uri("https://h5p.org/h5p/embed/1324232"));
+        }
+
+        private void btn_Real_Madrid_Click(object sender, RoutedEventArgs e)
+        {
+            Windows.System.Launcher.LaunchUriAsync(new Uri("https://h5p.org/h5p/embed/1324233"));
+        }
+
+        private void btn_futbol_español_Click(object sender, RoutedEventArgs e)
+        {
+            Windows.System.Launcher.LaunchUriAsync(new Uri("https://h5p.org/h5p/embed/1324234"));
+        }
+
+        private void btn_mundial_Click(object sender, RoutedEventArgs e)
+        {
+            Windows.System.Launcher.LaunchUriAsync(new Uri("https://h5p.org/h5p/embed/1324222"));
+        }
     }
 }

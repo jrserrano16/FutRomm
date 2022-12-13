@@ -6,51 +6,51 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="#FF1F1F1F" Width="1596">
+    Background="#FF5DFDCB" Width="1596">
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="131*"/>
-            <ColumnDefinition Width="401*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="5*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="79*"/>
             <RowDefinition Height="421*"/>
         </Grid.RowDefinitions>
-        <TextBlock x:Name="Titulo" Margin="69,56,48,0" TextWrapping="Wrap" Text="Player List" VerticalAlignment="Top" FontWeight="Bold" FontSize="48" Height="64" Foreground="White" FontFamily="Montserrat"/>
-        <GridView x:Name="ventana" RequestedTheme="Light" Padding="50,50,50,50" IsItemClickEnabled="True" Background="#FF292828" Margin="0,170,384,10" UseLayoutRounding="False" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Grid.ColumnSpan="2" BorderBrush="Black" BorderThickness="0,2,0,0" Grid.RowSpan="2" HorizontalAlignment="Right" Width="1210" SelectionChanged="ventana_SelectionChanged"/>
-        <ComboBox x:Name="cmb_Filter" Height="47" Margin="8,62,0,0" Width="274" Foreground="White" Background="#FDA6A6A6" SelectionChanged="cmb_Filter_SelectionChanged" BorderBrush="Black" Grid.Column="1">
-            <ComboBoxItem>
+        <TextBlock x:Name="Titulo" Margin="37,56,147,0" TextWrapping="Wrap" Text="Jugadores" VerticalAlignment="Top" FontWeight="Bold" FontSize="48" Height="64" Foreground="#FF08090A" FontFamily="Montserrat"/>
+        <GridView x:Name="ventana" RequestedTheme="Light" Padding="50,50,50,50" IsItemClickEnabled="True" Background="#FFF4FAFF" Margin="0,170,384,10" UseLayoutRounding="False" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Grid.ColumnSpan="2" BorderBrush="#FF3CDCAA" BorderThickness="0,2,0,0" Grid.RowSpan="2" HorizontalAlignment="Right" Width="1210" SelectionChanged="ventana_SelectionChanged"/>
+        <ComboBox x:Name="cmb_Filter" Margin="10,62,0,0" Width="274" Foreground="White" Background="#FF8789C0" SelectionChanged="cmb_Filter_SelectionChanged" BorderBrush="Black" Grid.Column="1" Height="47">
+            <ComboBoxItem Background="#FF8789C0">
                 <StackPanel Orientation="Horizontal">
                     <Image Source="/Assets/all-players.png" Width="60" />
                     <TextBlock Text= "Todos los jugadores" VerticalAlignment="center" Margin="10,0,0,0" Foreground="White" FontStyle="Normal" FontFamily="Montserrat" FontSize="20" HorizontalAlignment="Center" TextAlignment="Center"/>
                 </StackPanel>
             </ComboBoxItem>
-            <ComboBoxItem>
+            <ComboBoxItem Background="#FF8789C0">
                 <StackPanel Orientation="Horizontal">
                     <Image Source="/Assets/player.png" Width="60" />
                     <TextBlock Text= "Nombre" VerticalAlignment="center" Margin="10,0,0,0" Foreground="White" FontStyle="Normal" FontFamily="Montserrat" FontSize="20" HorizontalAlignment="Center" TextAlignment="Center"/>
                 </StackPanel>
             </ComboBoxItem>
-            <ComboBoxItem>
+            <ComboBoxItem Background="#FF8789C0">
                 <StackPanel Orientation="Horizontal">
                     <Image Source="/Assets/team.png" Width="60" />
                     <TextBlock Text= "Equipo" VerticalAlignment="center" Margin="10,0,0,0" Foreground="White" FontStyle="Normal" FontFamily="Montserrat" FontSize="20" HorizontalAlignment="Center" TextAlignment="Center"/>
                 </StackPanel>
             </ComboBoxItem>
-            <ComboBoxItem>
+            <ComboBoxItem Background="#FF8789C0">
                 <StackPanel Orientation="Horizontal">
                     <Image Source="/Assets/flag.png" Width="60" />
                     <TextBlock Text= "País" VerticalAlignment="center" Margin="10,0,0,0" Foreground="White" FontStyle="Normal" FontFamily="Montserrat" FontSize="20" HorizontalAlignment="Center" TextAlignment="Center"/>
                 </StackPanel>
             </ComboBoxItem>
-            <ComboBoxItem>
+            <ComboBoxItem Background="#FF8789C0">
                 <StackPanel Orientation="Horizontal">
                     <Image Source="/Assets/league.png" Width="60" />
                     <TextBlock Text= "League" VerticalAlignment="center" Margin="10,0,0,0" Foreground="White" FontStyle="Normal" FontFamily="Montserrat" FontSize="20" HorizontalAlignment="Center" TextAlignment="Center"/>
                 </StackPanel>
             </ComboBoxItem>
-            <ComboBoxItem>
+            <ComboBoxItem Background="#FF8789C0">
                 <StackPanel Orientation="Horizontal">
                     <Image Source="/Assets/position.png" Width="60" />
                     <TextBlock Text= "Posicion" VerticalAlignment="center" Margin="10,0,0,0" Foreground="White" FontStyle="Normal" FontFamily="Montserrat" FontSize="20" HorizontalAlignment="Center" TextAlignment="Center"/>
@@ -58,8 +58,8 @@
             </ComboBoxItem>
         </ComboBox>
 
-        <TextBox x:Name="tbx_Filtro" HorizontalAlignment="Left" Margin="282,62,0,0" TextWrapping="Wrap" Text="Select Filter" VerticalAlignment="Top" Height="47" Width="332" Foreground="#FF939191" TextAlignment="Center" FontFamily="Montserrat" FontSize="24" Background="White" FontStyle="Italic" KeyUp="tbx_Filtro_KeyUp" GotFocus="tbx_Filtro_GotFocus" IsEnabled="False" BorderBrush="Black" Grid.Column="1"/>
-        <Button x:Name="btn_search" BorderThickness="2,2,2,2" Height="47" Width="125" Click="calcularc_Click" Grid.Column="1" BorderBrush="#FF20758D" Background="#FF3791AB" Margin="633,62,0,0" IsEnabled="False" VerticalAlignment="Top">
+        <TextBox x:Name="tbx_Filtro" HorizontalAlignment="Left" Margin="282,62,0,0" TextWrapping="Wrap" Text="Select Filter" Width="332" Foreground="#FF08090A" TextAlignment="Center" FontFamily="Montserrat" FontSize="24" Background="#FFF4FAFF" FontStyle="Italic" KeyUp="tbx_Filtro_KeyUp" IsEnabled="False" BorderBrush="Black" Grid.Column="1" Height="47" VerticalAlignment="Top"/>
+        <Button x:Name="btn_search" BorderThickness="2,2,2,2" Click="calcularc_Click" Grid.Column="1" BorderBrush="#FF3C90CF" Background="#FF79C4FB" Margin="614,62,0,0" Width="125" VerticalAlignment="Top" Height="47">
             <StackPanel Orientation="Horizontal">
                 <Image Source="/Assets/search.png" Width="25" Height="19" Margin="0,0,0,2"/>
                 <TextBlock Text="Search"
@@ -67,6 +67,7 @@
                     VerticalAlignment="Center" Margin="0,0,0,2" FontFamily="Montserrat" Width="80" Foreground="White"/>
             </StackPanel>
         </Button>
-        
+        <Image HorizontalAlignment="Left" Height="100" Margin="321,35,0,0" VerticalAlignment="Top" Width="100" Source="/Assets/all-players.png"/>
+
     </Grid>
 </Page>

@@ -157,6 +157,9 @@
     <Compile Include="View\SearchTemplate.xaml.cs">
       <DependentUpon>SearchTemplate.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\SearchTemplateTeam.xaml.cs">
+      <DependentUpon>SearchTemplateTeam.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\TeamGuess.xaml.cs">
       <DependentUpon>TeamGuess.xaml</DependentUpon>
     </Compile>
@@ -167,41 +170,102 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\50.png" />
     <Content Include="Assets\all-players.png" />
     <Content Include="Assets\bundes.png" />
+    <Content Include="Assets\champions.png" />
     <Content Include="Assets\correct.png" />
+    <Content Include="Assets\end.png" />
     <Content Include="Assets\eredivisie.png" />
     <Content Include="Assets\euro.png" />
     <Content Include="Assets\flag.png" />
     <Content Include="Assets\futromm.png" />
+    <Content Include="Assets\heart.png" />
     <Content Include="Assets\incorrect.png" />
     <Content Include="Assets\info.png" />
     <Content Include="Assets\INT.png" />
     <Content Include="Assets\laliga.png" />
+    <Content Include="Assets\LargeTile.scale-100.png" />
+    <Content Include="Assets\LargeTile.scale-125.png" />
+    <Content Include="Assets\LargeTile.scale-150.png" />
+    <Content Include="Assets\LargeTile.scale-200.png" />
+    <Content Include="Assets\LargeTile.scale-400.png" />
     <Content Include="Assets\league.png" />
     <Content Include="Assets\left.png" />
     <Content Include="Assets\ligue1.png" />
+    <Content Include="Assets\maldini-call.png" />
+    <Content Include="Assets\maldini-excellent.png" />
+    <Content Include="Assets\maldini-ok.png" />
     <Content Include="Assets\maldini.png" />
+    <Content Include="Assets\mill-black.png" />
+    <Content Include="Assets\mill-correct.png" />
+    <Content Include="Assets\mill-incorrect.png" />
+    <Content Include="Assets\mill-template.jpg" />
+    <Content Include="Assets\mill.png" />
     <Content Include="Assets\millionaire.jpg" />
+    <Content Include="Assets\mundial2010.jpg" />
     <Content Include="Assets\nos.png" />
     <Content Include="Assets\player.png" />
     <Content Include="Assets\playertemplate.png" />
     <Content Include="Assets\position.png" />
     <Content Include="Assets\positionsmap.jpg" />
     <Content Include="Assets\premier.png" />
+    <Content Include="Assets\public.png" />
+    <Content Include="Assets\real_madrid.png" />
+    <Content Include="Assets\repetir.png" />
+    <Content Include="Assets\rfef.png" />
     <Content Include="Assets\right.png" />
     <Content Include="Assets\search.png" />
     <Content Include="Assets\serieA.png" />
     <Content Include="Assets\shirt.png" />
+    <Content Include="Assets\SmallTile.scale-100.png" />
+    <Content Include="Assets\SmallTile.scale-125.png" />
+    <Content Include="Assets\SmallTile.scale-150.png" />
+    <Content Include="Assets\SmallTile.scale-200.png" />
+    <Content Include="Assets\SmallTile.scale-400.png" />
+    <Content Include="Assets\SplashScreen.scale-100.png" />
+    <Content Include="Assets\SplashScreen.scale-125.png" />
+    <Content Include="Assets\SplashScreen.scale-150.png" />
+    <Content Include="Assets\SplashScreen.scale-400.png" />
+    <Content Include="Assets\Square150x150Logo.scale-100.png" />
+    <Content Include="Assets\Square150x150Logo.scale-125.png" />
+    <Content Include="Assets\Square150x150Logo.scale-150.png" />
+    <Content Include="Assets\Square150x150Logo.scale-400.png" />
+    <Content Include="Assets\Square44x44Logo.altform-lightunplated_targetsize-16.png" />
+    <Content Include="Assets\Square44x44Logo.altform-lightunplated_targetsize-24.png" />
+    <Content Include="Assets\Square44x44Logo.altform-lightunplated_targetsize-256.png" />
+    <Content Include="Assets\Square44x44Logo.altform-lightunplated_targetsize-32.png" />
+    <Content Include="Assets\Square44x44Logo.altform-lightunplated_targetsize-48.png" />
+    <Content Include="Assets\Square44x44Logo.altform-unplated_targetsize-16.png" />
+    <Content Include="Assets\Square44x44Logo.altform-unplated_targetsize-256.png" />
+    <Content Include="Assets\Square44x44Logo.altform-unplated_targetsize-32.png" />
+    <Content Include="Assets\Square44x44Logo.altform-unplated_targetsize-48.png" />
+    <Content Include="Assets\Square44x44Logo.scale-100.png" />
+    <Content Include="Assets\Square44x44Logo.scale-125.png" />
+    <Content Include="Assets\Square44x44Logo.scale-150.png" />
+    <Content Include="Assets\Square44x44Logo.scale-400.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-16.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-24.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-256.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-32.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-48.png" />
+    <Content Include="Assets\StoreLogo.scale-100.png" />
+    <Content Include="Assets\StoreLogo.scale-125.png" />
+    <Content Include="Assets\StoreLogo.scale-150.png" />
+    <Content Include="Assets\StoreLogo.scale-200.png" />
+    <Content Include="Assets\StoreLogo.scale-400.png" />
     <Content Include="Assets\team.png" />
     <Content Include="Assets\try.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-100.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-125.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-150.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-400.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
     <Content Include="Assets\Square150x150Logo.scale-200.png" />
     <Content Include="Assets\Square44x44Logo.scale-200.png" />
     <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
-    <Content Include="Assets\StoreLogo.png" />
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
   </ItemGroup>
   <ItemGroup>
@@ -246,6 +310,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\SearchTemplate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SearchTemplateTeam.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

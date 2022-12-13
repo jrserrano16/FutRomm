@@ -6,7 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-     Background="#FF1F1F1F" Height="850"  Width="1596" >
+     Background="#FF5AFBC9" Height="850"  Width="1596" >
 
     <Grid x:Name="grid">
         <Grid.ColumnDefinitions>
@@ -18,36 +18,36 @@
             <RowDefinition Height="673*"/>
             <RowDefinition Height="50*"/>
         </Grid.RowDefinitions>
-        <TextBlock x:Name="Titulo" Margin="475,38,453,0" TextWrapping="Wrap" Text="Player Info" VerticalAlignment="Top" FontWeight="Bold" FontSize="48" Height="61" Foreground="White" FontFamily="Montserrat"/>
-        <Rectangle x:Name="fondo" HorizontalAlignment="Left" Height="713" VerticalAlignment="Top" Width="1210" Fill="#FF292828" StrokeThickness="3.2" Grid.RowSpan="2" Stroke="Black" Grid.Row="1"/>
+        <TextBlock x:Name="Titulo" Margin="198,37,386,0" TextWrapping="Wrap" Text="Información de Jugador" VerticalAlignment="Top" FontWeight="Bold" FontSize="48" Height="61" Foreground="#FF06050A" FontFamily="Montserrat"/>
+        <Rectangle x:Name="fondo" HorizontalAlignment="Left" Height="713" VerticalAlignment="Top" Width="1210" Fill="#FFF3F6FD" StrokeThickness="3.2" Grid.RowSpan="2" Stroke="Black" Grid.Row="1"/>
         <Image x:Name="img_player" HorizontalAlignment="Left" Height="250" Width="250" Margin="32,34,0,0" Grid.Row="1" VerticalAlignment="Top" Source="/Assets/player.png"/>
-        <TextBlock x:Name="txt_nombre" TextWrapping="Wrap" Text="Player Name
-                   " Margin="287,58,588,542" FontSize="40" FontFamily="Montserrat" FontWeight="Bold" RenderTransformOrigin="0.5,0.5" Grid.Row="1" TextAlignment="Center">
-            <TextBlock.RenderTransform>
+        <TextBox x:Name="txt_nombre" TextWrapping="Wrap" Text="Player Name
+                   " Margin="287,58,588,542" FontSize="40" FontFamily="Montserrat" FontWeight="Bold" RenderTransformOrigin="0.5,0.5" Grid.Row="1" TextAlignment="Center" FocusVisualPrimaryBrush="#FF06050A" Foreground="#FF06050A" Background="#FF8687BD" IsReadOnly="True">
+            <TextBox.RenderTransform>
                 <CompositeTransform ScaleY="1"/>
-            </TextBlock.RenderTransform>
-        </TextBlock>
+            </TextBox.RenderTransform>
+        </TextBox>
         <Rectangle x:Name="fondo_player" HorizontalAlignment="Left" Height="250" Width="250" Margin="32,34,0,0" Grid.Row="1" Stroke="Black" VerticalAlignment="Top"/>
         <Image x:Name="img_team" HorizontalAlignment="Left" Height="68" Margin="32,362,0,0" Grid.Row="1" VerticalAlignment="Top" Width="61" Source="/Assets/team.png" RenderTransformOrigin="1.482,0.556"/>
-        <TextBlock x:Name="txt_team" Grid.Row="1" TextWrapping="Wrap" Text="Team : Paris SG" Margin="111,375,686,232" FontSize="30" FontFamily="Montserrat" FontWeight="Bold"/>
+        <TextBlock x:Name="txt_team" Grid.Row="1" TextWrapping="Wrap" Text="Team : Paris SG" Margin="111,375,686,232" FontSize="30" FontFamily="Montserrat" FontWeight="Bold" FocusVisualPrimaryBrush="#FF06050A" Foreground="#FF06050A"/>
         <Image x:Name="img_nation" HorizontalAlignment="Left" Height="55" Margin="38,293,0,0" Grid.Row="1" VerticalAlignment="Top" Width="63" Source="/Assets/flag.png" RenderTransformOrigin="0.434,0.755"/>
-        <TextBlock x:Name="txt_nation" Grid.Row="1" TextWrapping="Wrap" Text="Nation : France" Margin="112,300,650,304" FontSize="30" FontFamily="Montserrat" FontWeight="Bold"/>
+        <TextBlock x:Name="txt_nation" Grid.Row="1" TextWrapping="Wrap" Text="Nation : France" Margin="112,300,650,304" FontSize="30" FontFamily="Montserrat" FontWeight="Bold" FocusVisualPrimaryBrush="#FF06050A" Foreground="#FF06050A"/>
         <Image x:Name="img_league" HorizontalAlignment="Left" Height="68" Margin="32,440,0,0" Grid.Row="1" VerticalAlignment="Top" Width="61" Source="/Assets/league.png"/>
-        <TextBlock x:Name="txt_league" Grid.Row="1" TextWrapping="Wrap" Text="League : Ligue 1" Margin="114,452,665,160" FontSize="30" FontFamily="Montserrat" FontWeight="Bold"/>
-        <TextBlock x:Name="txt_age" Grid.Row="1" TextWrapping="Wrap" Text="Age : 23" Margin="362,118,670,482" FontSize="40" FontFamily="Montserrat" FontWeight="Bold" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" TextAlignment="Center">
+        <TextBlock x:Name="txt_league" Grid.Row="1" TextWrapping="Wrap" Text="League : Ligue 1" Margin="114,452,665,160" FontSize="30" FontFamily="Montserrat" FontWeight="Bold" FocusVisualPrimaryBrush="#FF06050A" Foreground="#FF06050A"/>
+        <TextBlock x:Name="txt_age" Grid.Row="1" TextWrapping="Wrap" Text="Age : 23" Margin="343,155,637,445" FontSize="40" FontFamily="Montserrat" FontWeight="Bold" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" TextAlignment="Center" FocusVisualPrimaryBrush="#FF06050A" Foreground="#FF06050A">
             <TextBlock.RenderTransform>
                 <CompositeTransform ScaleY="1" Rotation="0.27"/>
             </TextBlock.RenderTransform>
         </TextBlock>
-        <Image x:Name="img_foot" HorizontalAlignment="Left" Height="49" Margin="38,517,0,0" Grid.Row="1" VerticalAlignment="Top" Width="61" Source="/Assets/left.png" RenderTransformOrigin="0.848,0.526"/>
-        <TextBlock x:Name="txt_foot" Grid.Row="1" TextWrapping="Wrap" Text="Foot : Left" Margin="114,524,769,83" FontSize="30" FontFamily="Montserrat" FontWeight="Bold"/>
-        <Image x:Name="img_positions" HorizontalAlignment="Left" Height="623" Margin="632,21,0,0" VerticalAlignment="Top" Width="458" Source="/Assets/positionsmap.jpg" RenderTransformOrigin="0.848,0.526" Stretch="Fill" Grid.Row="1"/>
-        <Button x:Name="btn_info" BorderThickness="2,2,2,2" Height="64" Width="246" BorderBrush="#FF20758D" Background="#FF3791AB" Margin="361,580,0,0" VerticalAlignment="Top" Grid.Row="1" Click="btn_info_Click">
+        <Image x:Name="img_foot" HorizontalAlignment="Left" Height="56" Margin="33,517,0,0" Grid.Row="1" VerticalAlignment="Top" Width="71" Source="/Assets/left.png" RenderTransformOrigin="0.848,0.526"/>
+        <TextBlock x:Name="txt_foot" Grid.Row="1" TextWrapping="Wrap" Text="Foot : Left" Margin="114,524,769,83" FontSize="30" FontFamily="Montserrat" FontWeight="Bold" FocusVisualPrimaryBrush="#FF06050A" Foreground="#FF06050A"/>
+        <Image x:Name="img_positions" HorizontalAlignment="Left" Height="611" Margin="632,21,0,0" VerticalAlignment="Top" Width="458" Source="/Assets/positionsmap.jpg" RenderTransformOrigin="0.848,0.526" Stretch="Fill" Grid.Row="1"/>
+        <Button x:Name="btn_info" BorderThickness="2,2,2,2" Height="64" Width="246" BorderBrush="#FF479AD9" Background="#FF7AC5FE" Margin="360,568,0,0" VerticalAlignment="Top" Grid.Row="1" Click="btn_info_Click">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Width="246" Margin="0,-8,0,-14">
-                <Image Source="/Assets/info.png" Width="61" Height="37"/>
+                <Image Source="/Assets/info.png" Width="61" Height="41"/>
                 <TextBlock Text="FIFA 23 Info"
                     FontSize="30"
-                    VerticalAlignment="Center" Margin="0,0,0,2" FontFamily="Montserrat" Width="316" Foreground="White" Height="32"/>
+                    VerticalAlignment="Center" Margin="0,0,0,2" FontFamily="Montserrat" Width="316" Foreground="White" Height="37"/>
             </StackPanel>
         </Button>
         <Image x:Name="GK" Tag="GK" HorizontalAlignment="Left" Height="66" Margin="834,544,0,0" Grid.Row="1" VerticalAlignment="Top" Width="58" Source="/Assets/shirt.png" Opacity="0.25" ToolTipService.ToolTip="GK" FocusVisualPrimaryBrush="White"/>
@@ -71,6 +71,7 @@
         <Image x:Name="CF" Tag="CF" HorizontalAlignment="Left" Height="66" Margin="834,118,0,0" Grid.Row="1" VerticalAlignment="Top" Width="58" Source="/Assets/shirt.png" Opacity="0.25"/>
         <Image x:Name="ST1" Tag="ST" HorizontalAlignment="Left" Height="66" Margin="897,82,0,0" VerticalAlignment="Top" Width="58" Source="/Assets/shirt.png" Opacity="0.25" Grid.Row="1"/>
         <Image x:Name="ST2" Tag="ST" HorizontalAlignment="Left" Height="66" Margin="769,82,0,0" VerticalAlignment="Top" Width="58" Source="/Assets/shirt.png" Opacity="0.25" Grid.Row="1"/>
-        <TextBlock x:Name="txt_position" Grid.Row="1" TextWrapping="Wrap" Text="Position : ST" Margin="32,584,881,5" FontSize="30" FontFamily="Montserrat" FontWeight="Bold"/>
+        <TextBlock x:Name="txt_position" Grid.Row="1" TextWrapping="Wrap" Text="Position : ST" Margin="32,595,881,12" FontSize="30" FontFamily="Montserrat" FontWeight="Bold" FocusVisualPrimaryBrush="#FF06050A" Foreground="#FF06050A"/>
+        <Image HorizontalAlignment="Left" Height="100" Margin="823,0,0,0" VerticalAlignment="Center" Width="100" Source="/Assets/player.png"/>
     </Grid>
 </Page>

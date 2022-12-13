@@ -6,9 +6,42 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="#FF292828">
+     Background="#FF5BFCCA" Height="850"  Width="1596">
 
-    <Grid>
-
+    <Grid x:Name="grid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="16*"/>
+            <ColumnDefinition Width="5*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="134*"/>
+            <RowDefinition Height="707*"/>
+            <RowDefinition Height="50*"/>
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="Titulo" Margin="315,35,414,0" TextWrapping="Wrap" Text="Adivina el Equipo" VerticalAlignment="Top" FontWeight="Bold" FontSize="48" Height="64" Foreground="#FF07050A" FontFamily="Montserrat"/>
+        <Rectangle x:Name="fondo" HorizontalAlignment="Left" Height="713" VerticalAlignment="Top" Width="1210" Fill="#FFF4FAFF" StrokeThickness="3.2" Grid.RowSpan="2" Stroke="Black" Grid.Row="1"/>
+        <Image x:Name="img_team" Source="/Assets/team.png" Margin="200,10,831,480" Grid.Row="1"/>
+        <Image x:Name="country" HorizontalAlignment="Left" Height="70" Margin="200,245,0,0" VerticalAlignment="Top" Width="70" Source="/Assets/incorrect.png" Grid.Row="1" ToolTipService.ToolTip="País"/>
+        <Image x:Name="league" HorizontalAlignment="Left" Height="70" Margin="305,245,0,0" VerticalAlignment="Top" Width="70" Source="/Assets/incorrect.png" Grid.Row="1" ToolTipService.ToolTip="Liga"/>
+        <TextBox x:Name="tbx_try1" Tag="Try" HorizontalAlignment="Left" Margin="84,338,0,0" TextWrapping="Wrap" Text="#1 : " VerticalAlignment="Top" Background="#FF8789C0" Height="47" Width="440" FontFamily="Montserrat" FontSize="24" IsReadOnly="True" Grid.Row="1" IsTapEnabled="False" Foreground="#FFF4FAFF"/>
+        <TextBox x:Name="tbx_try2" Tag="Try" HorizontalAlignment="Left" Margin="84,384,0,0" TextWrapping="Wrap" Text="#2 : " VerticalAlignment="Top" Background="#FF8789C0" Height="47" Width="440" FontFamily="Montserrat" FontSize="24" IsReadOnly="True" Grid.Row="1" IsTapEnabled="False" Foreground="#FFF4FAFF"/>
+        <TextBox x:Name="tbx_try3" Tag="Try" HorizontalAlignment="Left" Margin="84,429,0,0" TextWrapping="Wrap" Text="#3 : " VerticalAlignment="Top" Background="#FF8789C0" Height="47" Width="440" FontFamily="Montserrat" FontSize="24" IsReadOnly="True" Grid.Row="1" IsTapEnabled="False" Foreground="#FFF4FAFF"/>
+        <TextBox x:Name="tbx_try4" Tag="Try" HorizontalAlignment="Left" Margin="84,474,0,0" TextWrapping="Wrap" Text="#4 : " VerticalAlignment="Top" Background="#FF8789C0" Height="47" Width="440" FontFamily="Montserrat" FontSize="24" IsReadOnly="True" Grid.Row="1" IsTapEnabled="False" Foreground="#FFF4FAFF"/>
+        <TextBox x:Name="tbx_try5" Tag="Try" HorizontalAlignment="Left" Margin="84,520,0,0" TextWrapping="Wrap" Text="#5 : " VerticalAlignment="Top" Background="#FF8789C0" Height="47" Width="440" FontFamily="Montserrat" FontSize="24" IsReadOnly="True" Grid.Row="1" IsTapEnabled="False" Foreground="#FFF4FAFF"/>
+        <TextBox x:Name="tbx_try6" Tag="Try" HorizontalAlignment="Left" Margin="84,565,0,0" TextWrapping="Wrap" Text="#6 : " VerticalAlignment="Top" Background="#FF8789C0" Height="47" Width="440" FontFamily="Montserrat" FontSize="24" IsReadOnly="True" Grid.Row="1" IsTapEnabled="False" Foreground="#FFF4FAFF"/>
+        <TextBox x:Name="tbx_guess" HorizontalAlignment="Left" Margin="652,333,0,0" TextWrapping="Wrap" Text="Buscar Equipos" VerticalAlignment="Top" Background="#FFF4FAFF" Height="47" Width="440" FontFamily="Montserrat" FontSize="24" TextAlignment="Center" FontStyle="Italic" Grid.Row="1" KeyDown="tbx_guess_KeyDown" Foreground="#FF141414" BorderBrush="#FF479AD9" GotFocus="tbx_guess_GotFocus"/>
+        <Image x:Name="img_country" HorizontalAlignment="Left" Height="40" Margin="215,260,0,0" Grid.Row="1" VerticalAlignment="Top" Width="40" Source="/Assets/INT.png" ToolTipService.ToolTip="País"/>
+        <Image x:Name="img_league" HorizontalAlignment="Left" Height="40" Margin="321,260,0,0" Grid.Row="1" VerticalAlignment="Top" Width="40" Source="/Assets/INT.png" ToolTipService.ToolTip="Liga"/>
+        <GridView x:Name="desp" Grid.Row="1" Margin="652,380,124,62" SelectionChanged="desp_SelectionChanged"/>
+        <TextBlock x:Name="tbx_name" HorizontalAlignment="Left" Margin="164,200,0,0" Grid.Row="1" TextWrapping="Wrap" Text="???????????" VerticalAlignment="Top" Height="35" Width="252" FontSize="24" FontFamily="Montserrat" TextAlignment="Center" Foreground="#FF06050A" FontWeight="Bold"/>
+        <Image HorizontalAlignment="Left" Height="100" Margin="772,0,0,0" VerticalAlignment="Center" Width="100" Source="/Assets/team.png"/>
+        <Button x:Name="btn_info" BorderThickness="2,2,2,2" Height="64" Width="193" BorderBrush="#FF479AD9" Background="#FF7AC5FE" Margin="776,245,0,0" VerticalAlignment="Top" Grid.Row="1" Click="btn_info_Click">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Width="192" Margin="0,-8,0,-14">
+                <Image Source="/Assets/repetir.png" Width="61" Height="37"/>
+                <TextBlock Text="Repetir"
+                    FontSize="30"
+                    FontFamily="Montserrat" Width="128" Foreground="White" Height="40"/>
+            </StackPanel>
+        </Button>
     </Grid>
 </Page>

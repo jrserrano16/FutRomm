@@ -6,9 +6,48 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+     Background="#FF5DFDBC" Height="850"  Width="1596">
 
-    <Grid>
-
+    <Grid x:Name="grid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="16*"/>
+            <ColumnDefinition Width="5*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="134*"/>
+            <RowDefinition Height="707*"/>
+            <RowDefinition Height="50*"/>
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="Titulo" Margin="373,35,368,0" TextWrapping="Wrap" Text="Vídeos Interactivos" VerticalAlignment="Top" FontWeight="Bold" FontSize="48" Height="64" Foreground="#FF110C0C" FontFamily="Montserrat"/>
+        <Rectangle x:Name="fondo" HorizontalAlignment="Center" Height="675" VerticalAlignment="Center" Width="1216" Grid.Row="1" Stretch="Fill" Opacity="0.97" Fill="#FFF4FAFF"/>
+        <TextBlock x:Name="tbx_name" HorizontalAlignment="Left" Margin="171,200,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="35" Width="252" FontSize="24" FontFamily="Montserrat" TextAlignment="Center" FocusVisualPrimaryBrush="#FF3FBE59"/>
+        <Button x:Name="btn_Champions" BorderThickness="2,2,2,2" Height="300" Width="435" BorderBrush="#FF479AD9" Background="#FF7AC5FE" Margin="69,24,0,0" Grid.Row="1"  VerticalAlignment="Top" Click="btn_Champions_Click">
+            <StackPanel Orientation="Vertical" Margin="-208,-140,-207,-140">
+                <Image Source="/Assets/champions.png" Width="224" Height="235" Margin="0,0,0,2"/>
+                <TextBlock Text="Historia de la Champions League "
+                    FontSize="25" Margin="0,0,0,2" FontFamily="Montserrat" Width="412" Foreground="White"/>
+            </StackPanel>
+        </Button>
+        <Button x:Name="btn_Real_Madrid" BorderThickness="2,2,2,2" Height="300" Width="435" BorderBrush="#FF479AD9" Background="#FF7AC5FE" Margin="638,24,0,0" Grid.Row="1"  VerticalAlignment="Top" Click="btn_Real_Madrid_Click">
+            <StackPanel Orientation="Vertical" Margin="-208,-140,-207,-140">
+                <Image Source="/Assets/real_madrid.png" Width="270" Height="249" Margin="0,0,0,2"/>
+                <TextBlock Text="Historia del Real Madrid"
+                    FontSize="26" Margin="0,0,0,2" FontFamily="Montserrat" Width="311" Foreground="White"/>
+            </StackPanel>
+        </Button>
+        <Button x:Name="btn_futbol_español" BorderThickness="2,2,2,2" Height="300" Width="435" BorderBrush="#FF479AD9" Background="#FF7AC5FE" Margin="69,344,0,0" Grid.Row="1"  VerticalAlignment="Top" Click="btn_futbol_español_Click">
+            <StackPanel Orientation="Vertical" Margin="-208,-140,-207,-140">
+                <Image Source="/Assets/rfef.png" Width="224" Height="235" Margin="0,0,0,2"/>
+                <TextBlock Text="Historia del Fútbol Español"
+                    FontSize="26" Margin="0,0,0,2" FontFamily="Montserrat" Width="355" Foreground="White"/>
+            </StackPanel>
+        </Button>
+        <Button x:Name="btn_mundial" BorderThickness="2,2,2,2" Height="300" Width="436" BorderBrush="#FF479AD9" Background="#FF7AC5FE" Margin="638,344,0,0" Grid.Row="1"  VerticalAlignment="Top" Click="btn_mundial_Click">
+            <StackPanel Orientation="Vertical" Margin="-97,-140,-100,-140">
+                <Image Source="/Assets/mundial2010.jpg" Width="270" Height="249" Margin="0,0,0,2"/>
+                <TextBlock Text="Mundial Sudáfrica 2010"
+                    FontSize="26" Margin="0,0,0,2" FontFamily="Montserrat" Width="310" Foreground="White"/>
+            </StackPanel>
+        </Button>
     </Grid>
 </Page>

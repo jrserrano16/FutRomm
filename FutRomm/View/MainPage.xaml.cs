@@ -26,6 +26,10 @@ namespace FutRomm
         public MainPage()
         {
             this.InitializeComponent();
+            // for(int i = 0; i < 2000; i++)
+            // {
+            //  Controller.Controller.deleteNodes();
+            //}        
             ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.FullScreen;
             var view = ApplicationView.GetForCurrentView();
             if (view.IsFullScreenMode)
@@ -35,81 +39,6 @@ namespace FutRomm
             else
             {
                 view.TryEnterFullScreenMode();
-            }
-        }
-
-        private void ContentFrame_NavigationFailed(object sender, NavigationFailedEventArgs e)
-        {
-
-        }
-        private void yeahPlayer()
-        {
-            for (int i = 1; i <= 843; i++)
-            {
-                PlayersResult result = Controller.Controller.GetPlayers(i);
-
-                if (result == null)
-                {
-                    return;
-                }
-
-                var listaPlayers = new List<Player>();
-                foreach (PlayerR item in result.items)
-                {
-                    Controller.Controller.addPlayer(item);
-                }
-            }
-        }
-
-        private void yeahNation()
-        {
-            for (int i = 1; i <= 8; i++)
-            {
-                NationsResult result = Controller.Controller.GetNations(i);
-
-                if (result == null)
-                {
-                    return;
-                }
-
-                foreach (NationR item in result.items)
-                {
-                    Controller.Controller.addNation(item);
-                }
-            }
-        }
-        private void yeahTeam()
-        {
-            for (int i = 1; i <= 35; i++)
-            {
-                TeamsResult result = Controller.Controller.GetTeams(i);
-
-                if (result == null)
-                {
-                    return;
-                }
-
-                foreach (TeamR item in result.items)
-                {
-                    Controller.Controller.addTeams(item);
-                }
-            }
-        }
-        private void yeahLeague()
-        {
-            for (int i = 1; i <= 3; i++)
-            {
-                LeagueResult result = Controller.Controller.GetLeagues(i);
-
-                if (result == null)
-                {
-                    return;
-                }
-
-                foreach (LeagueR item in result.items)
-                {
-                    Controller.Controller.addleague(item);
-                }
             }
         }
         private void NaviView_ItemInvoked(NavigationView sender, NavigationViewItemInvokedEventArgs args)
@@ -132,18 +61,31 @@ namespace FutRomm
                 return false;
 
 
-            ContentFrame.Navigate(view, this, new EntranceNavigationTransitionInfo());
+            frame.Navigate(view, this, new EntranceNavigationTransitionInfo());
             return true;
         }
         public void getPlayerInfo(Player p)
-        { 
-            ContentFrame.Navigate(typeof(PlayerInfo), p);
+        {
+            frame.Navigate(typeof(PlayerInfo), p);
             SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility = AppViewBackButtonVisibility.Visible;
         }
         public void navigateMillionaire()
         {
-            ContentFrame.Navigate(typeof(MillionaireGame));
+            frame.Navigate(typeof(MillionaireGame));
             SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility = AppViewBackButtonVisibility.Visible;
         }
+
+        private void NaviView_BackRequested(NavigationView sender, NavigationViewBackRequestedEventArgs args)
+        {
+            if (frame.CanGoBack)
+            {
+                frame.GoBack();
+            }
+        }
+
+        // App.xaml.cs
+        //
+        // Add this method to the App class.
+        
     }
 }

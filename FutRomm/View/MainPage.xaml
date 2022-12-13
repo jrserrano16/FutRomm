@@ -6,23 +6,24 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="#FF292828" MinHeight="790" MinWidth="1920" Height="790" Width="1477">
+    Background="#FFF4FAFF" MinHeight="790" MinWidth="1920" Height="790" Width="1477">
 
     <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Height="780" Width="1920">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="27*"/>
             <ColumnDefinition Width="133*"/>
         </Grid.ColumnDefinitions>
-        <Image x:Name="img_futromm" HorizontalAlignment="Left" Height="700" VerticalAlignment="Center" Width="700" Source="/Assets/futromm.png" Stretch="Fill" Grid.Column="1" Margin="246,0,0,0"/>
-        <Frame x:Name="ContentFrame" NavigationFailed="ContentFrame_NavigationFailed" Height="800" VerticalAlignment="Center" HorizontalAlignment="Center" Width="1596" Grid.Column="1"/>
-        <NavigationView x:Name="NaviView" VerticalAlignment="Center" Height="800" ItemInvoked="NaviView_ItemInvoked" IsSettingsVisible="False" IsPaneToggleButtonVisible="False" Grid.ColumnSpan="2" >
+        <NavigationView x:Name="NaviView" VerticalAlignment="Center" Height="800" ItemInvoked="NaviView_ItemInvoked" IsSettingsVisible="False" IsPaneToggleButtonVisible="False" Grid.ColumnSpan="2" RequestedTheme="Light" HighContrastAdjustment="Application" IsBackButtonVisible="Visible" BackRequested="NaviView_BackRequested"
+                        IsBackEnabled="{Binding ElementName=frame, Path=CanGoBack}">
             <NavigationView.MenuItems>
-                <NavigationViewItem Content="Show Player List" Tag="PlayerList" Icon="People" FontFamily="Montserrat" FontSize="20"/>
-                <NavigationViewItem Content="Guess the Player" Tag="PlayerGuess" Icon="Contact"  FontFamily="Montserrat" FontSize="20"/>
-                <NavigationViewItem Content="Guess the Team" Tag="TeamGuess" Icon="Flag"  FontFamily="Montserrat" FontSize="20"/>
-                <NavigationViewItem Content="Millionaire Game" Tag="MillionaireIntro" Icon="Shop"  FontFamily="Montserrat" FontSize="20"/>
-                <NavigationViewItem Content="Interactive Videos" Tag="InteractiveVideos" Icon="Video"  FontFamily="Montserrat" FontSize="20"/>
+                <NavigationViewItem Content="BBDD Jugadores" Tag="PlayerList" Icon="People" FontFamily="Montserrat" FontSize="20"/>
+                <NavigationViewItem Content="Adivinar el Jugador" Tag="PlayerGuess" Icon="Contact"  FontFamily="Montserrat" FontSize="20"/>
+                <NavigationViewItem Content="Adivina el Equipo" Tag="TeamGuess" Icon="Flag"  FontFamily="Montserrat" FontSize="20"/>
+                <NavigationViewItem Content="Test Millonario" Tag="MillionaireIntro" Icon="Shop"  FontFamily="Montserrat" FontSize="20"/>
+                <NavigationViewItem Content="Vídeos Interactivos" Tag="InteractiveVideos" Icon="Video"  FontFamily="Montserrat" FontSize="20"/>
             </NavigationView.MenuItems>
         </NavigationView>
+        <Image x:Name="img_futromm" HorizontalAlignment="Left" Height="700" VerticalAlignment="Center" Width="700" Source="/Assets/futromm.png" Stretch="Fill" Grid.Column="1" Margin="246,0,0,0"/>
+        <Frame x:Name="frame" Height="800" VerticalAlignment="Center" HorizontalAlignment="Center" Width="1596" Grid.Column="1"/>
     </Grid>
 </Page>

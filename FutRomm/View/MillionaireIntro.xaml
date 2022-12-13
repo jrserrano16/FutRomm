@@ -6,7 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-     Background="#FF1F1F1F" Height="850"  Width="1596">
+     Background="#FF5DFDBC" Height="850"  Width="1596">
 
     <Grid x:Name="grid">
         <Grid.ColumnDefinitions>
@@ -18,12 +18,12 @@
             <RowDefinition Height="707*"/>
             <RowDefinition Height="50*"/>
         </Grid.RowDefinitions>
-        <TextBlock x:Name="Titulo" Margin="225,35,219,0" TextWrapping="Wrap" Text="Who wants to be a Millionaire?" VerticalAlignment="Top" FontWeight="Bold" FontSize="48" Height="64" Foreground="White" FontFamily="Montserrat"/>
-        <Image x:Name="fondo" HorizontalAlignment="Center" Height="675" VerticalAlignment="Center" Width="1216" Grid.Row="1" Source="/Assets/millionaire.jpg" Stretch="Fill" Opacity="0.71"/>
+        <TextBlock x:Name="Titulo" Margin="240,35,204,0" TextWrapping="Wrap" Text="¿Quién quiere ser Millonario?" VerticalAlignment="Top" FontWeight="Bold" FontSize="48" Height="64" Foreground="#FF120D0D" FontFamily="Montserrat"/>
+        <Image x:Name="fondo" HorizontalAlignment="Center" Height="675" VerticalAlignment="Center" Width="1216" Grid.Row="1" Source="/Assets/millionaire.jpg" Stretch="Fill" Opacity="0.97"/>
         <TextBlock x:Name="tbx_name" HorizontalAlignment="Left" Margin="171,200,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="35" Width="252" FontSize="24" FontFamily="Montserrat" TextAlignment="Center" FocusVisualPrimaryBrush="#FF3FBE59"/>
         <Image x:Name="img_maldini" HorizontalAlignment="Left" Height="530" Margin="-21,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="385" Source="/Assets/maldini.png" Stretch="Fill"/>
-        <TextBox x:Name="tbx_q" HorizontalAlignment="Center" Margin="0,540,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Bienvenido a Quien quiere ser millonario! Yo soy Julio Maldonado y estoy aquí para ponerte a prueba. A continuación deberás responder 15 preguntas sobre fútbol, donde sólo una respuesta es la correcta.  ¿Lograrás acertar todas las preguntas y convertirte en una enciclopedia del fútbol?" VerticalAlignment="Top" FontFamily="Montserrat" FontSize="22" Height="101" Width="1130" Background="#FF121144"/>
-        <Button x:Name="btn_start" BorderThickness="2,2,2,2" Height="91" Width="248" BorderBrush="#FF20758D" Background="#FF3791AB" Margin="477,0,0,0" Grid.Row="1" Click="btn_start_Click">
+        <TextBox x:Name="tbx_q" HorizontalAlignment="Center" Margin="0,540,0,0" Grid.Row="1" TextWrapping="Wrap" Text="- Maldini : Bienvenido a Quien quiere ser millonario! Yo soy Julio Maldonado y estoy aquí para ponerte a prueba. A continuación deberás responder 15 preguntas sobre fútbol, donde sólo una respuesta es la correcta.  ¿Lograrás acertar todas las preguntas y convertirte en una enciclopedia del fútbol?" VerticalAlignment="Top" FontFamily="Montserrat" FontSize="21" Height="125" Width="1196" Background="#FF121144"/>
+        <Button x:Name="btn_start" BorderThickness="2,2,2,2" Height="91" Width="248" BorderBrush="#FF479AD9" Background="#FF7AC5FE" Margin="477,0,0,0" Grid.Row="1" Click="btn_start_Click">
             <StackPanel Orientation="Horizontal" Margin="-4,0,0,0">
                 <Image Source="/Assets/euro.png" Width="72" Height="54" Margin="0,0,0,2"/>
                 <TextBlock Text="Jugar"

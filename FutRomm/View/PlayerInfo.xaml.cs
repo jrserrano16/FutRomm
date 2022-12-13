@@ -24,15 +24,15 @@ namespace FutRomm.View
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             p = (Player)e.Parameter;
-            txt_age.Text = "Age : "+p.age.ToString();
+            txt_age.Text = "Edad : "+p.age.ToString();
             txt_nombre.Text = p.name;
-            txt_nation.Text = "Nation : "+ p.nation;
-            txt_league.Text = "League : "+p.league;
-            txt_foot.Text = "Foot : "+p.foot;
-            txt_position.Text = "Position : "+p.position;
-            txt_team.Text = "Team : "+p.club;
+            txt_nation.Text = "País : "+ p.nation;
+            txt_league.Text = "Liga : "+p.league;
+            txt_foot.Text = "Pie : "+p.foot;
+            txt_position.Text = "Posición : "+p.position;
+            txt_team.Text = "Equipo : "+p.club;
 
-            if (p.foot.Equals("Left"))
+            if (p.foot.Equals("Zurdo"))
             {
                 img_foot.Source = new BitmapImage(new Uri("ms-appx:///Assets//left.png"));
             }
